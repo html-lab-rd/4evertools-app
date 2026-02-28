@@ -68,7 +68,7 @@
         .sidebar-brand .logo-container {
             width: 96px;
             height: 96px;
-            margin: 0 auto 5px;
+            margin: 0 auto 15px;
             position: relative;
         }
 
@@ -82,11 +82,10 @@
 
         .sidebar-brand h1 {
             font-weight: 600;
-            font-size: 1.6rem;
+            font-size: 1.2rem;
             color: white;
             letter-spacing: 0.025em;
             margin-bottom: 5px;
-            margin-top: 0px;
             white-space: nowrap;
         }
 
@@ -369,7 +368,6 @@
         }
         .flip-card.is-flipped .flip-card-inner { transform: rotateY(180deg); }
         .flip-card-front, .flip-card-back {
-            position: absolute;
             width: 100%;
             height: 100%;
             -webkit-backface-visibility: hidden;
@@ -380,7 +378,15 @@
             background: white;
             border-radius: 10px;
         }
-        .flip-card-back { transform: rotateY(180deg); }
+        .flip-card-front {
+            position: relative;
+        }
+        .flip-card-back { 
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotateY(180deg); 
+        }
 
         /* Charts and Tables */
         .charts-container {
@@ -963,6 +969,15 @@
 
         @keyframes spin { 100% { transform: rotate(360deg); } }
         .lucide-spin { animation: spin 2s linear infinite; }
+
+
+
+
+
+
+
+
+
     </style>
 </head>
 <body>
