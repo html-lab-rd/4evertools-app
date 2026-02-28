@@ -1,4 +1,4 @@
-        :root {
+ :root {
             --primary: #DF1783;
             --primary-dark: #BF0063;
             --secondary: #4A3FC9;
@@ -55,7 +55,7 @@
         .sidebar-brand .logo-container {
             width: 96px;
             height: 96px;
-            margin: 0 auto 5px;
+            margin: 0 auto 15px;
             position: relative;
         }
 
@@ -69,11 +69,10 @@
 
         .sidebar-brand h1 {
             font-weight: 600;
-            font-size: 1.6rem;
+            font-size: 1.2rem;
             color: white;
             letter-spacing: 0.025em;
             margin-bottom: 5px;
-            margin-top: 0px;
             white-space: nowrap;
         }
 
@@ -356,7 +355,6 @@
         }
         .flip-card.is-flipped .flip-card-inner { transform: rotateY(180deg); }
         .flip-card-front, .flip-card-back {
-            position: absolute;
             width: 100%;
             height: 100%;
             -webkit-backface-visibility: hidden;
@@ -367,7 +365,15 @@
             background: white;
             border-radius: 10px;
         }
-        .flip-card-back { transform: rotateY(180deg); }
+        .flip-card-front {
+            position: relative;
+        }
+        .flip-card-back { 
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotateY(180deg); 
+        }
 
         /* Charts and Tables */
         .charts-container {
@@ -950,3 +956,62 @@
 
         @keyframes spin { 100% { transform: rotate(360deg); } }
         .lucide-spin { animation: spin 2s linear infinite; }
+
+
+
+
+
+
+
+
+
+
+
+#authContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.auth-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.auth-box input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.auth-box button {
+    margin: 5px;
+    padding: 8px 16px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#logoutBtn {
+    background: var(--danger);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
